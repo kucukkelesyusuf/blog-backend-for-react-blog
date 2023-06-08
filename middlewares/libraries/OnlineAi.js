@@ -21,7 +21,7 @@ user.map(async(data)=>{
 
      let now =  new Date();
   
-if((now.getMinutes() - ai.date.getMinutes()) > 1){
+if((now.getMinutes() - ai.date.getMinutes()) > 1 || ( (now.getHours() - ai.date.getHours()) >2 && (now.getUTCDay() - ai.date.getUTCDay() ) >=0  )){
     
    
     const user = await User.findById(ai.id);
